@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZuliianzShop | Enterprise Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <header>
+        <div class="container navbar">
+            <div class="logo">
+                <img src="Screenshot 2026-01-09 014132.png" alt="Logo ZuliianzShop"> </div>
+            <nav> <ul>
+                    <li><a onclick="showPage('home')">Beranda</a></li>
+                    <li><a onclick="showPage('transaksi')">Transaksi</a></li>
+                    <li><a onclick="showPage('login')">Login</a></li>
+                    <li><a onclick="showPage('kontak')" class="nav-contact-btn">Hubungi Kami</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <div id="home" class="page-content active">
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <span class="badge">ESTABLISHED 2024</span>
+                    <h1>Digital Retail <br>Next Generation.</h1>
+                    <p>ZuliianzShop adalah pemimpin pasar dalam integrasi ekosistem perdagangan digital. Kami mengkombinasikan teknologi otomasi dengan layanan personal untuk menciptakan pengalaman belanja tanpa hambatan bagi klien korporat maupun individu di seluruh dunia.</p>
+                    <div class="hero-btns">
+                        <button class="btn-action" onclick="showPage('transaksi')">Mulai Transaksi</button>
+                        <button class="btn-secondary" onclick="showPage('kontak')">Pelajari Lebih Lanjut</button>
+                    </div>
+                </div>
+                <div class="hero-img">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800" alt="Dashboard Corporate">
+                </div>
+            </div>
+        </div>
+
+        <div id="transaksi" class="page-content">
+            <div class="card">
+                <h2 class="section-title">Manajemen Transaksi</h2>
+                <form id="formTransaksi">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Nama Transaksi / Barang</label>
+                            <input type="text" id="t_nama" placeholder="Contoh: MacBook Air M3">
+                        </div>
+                        <div class="form-group">
+                            <label>Nilai Transaksi (IDR)</label>
+                            <input type="number" id="t_jumlah" placeholder="Masukkan angka">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Kategori Inventaris</label>
+                        <select id="t_kategori">
+                            <option value="">-- Pilih Kategori --</option>
+                            <option value="Infrastruktur">Infrastruktur</option>
+                            <option value="Gadget">Gadget</option>
+                            <option value="Layanan">Layanan</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-action">Simpan Transaksi</button>
+                    <p id="error-msg" class="error-text">Harap lengkapi semua kolom transaksi!</p> </form>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>IDENTIFIKASI ITEM</th>
+                            <th>TOTAL NOMINAL</th>
+                            <th>KATEGORI</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabel-body">
+                        <tr>
+                            <td><b>Cloud Server Subscription</b></td>
+                            <td>Rp 5.000.000</td>
+                            <td>Infrastruktur</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="kontak" class="page-content">
+            <div class="contact-header">
+                <h1>Get in Touch.</h1>
+                <p>Hubungi tim kami untuk konsultasi lebih lanjut.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>Email</h3>
+                    <p><a href="mailto:mugiyuliansyah@gmail.com">mugiyuliansyah@gmail.com</a></p>
+                </div>
+                <div class="contact-card">
+                    <h3>WhatsApp</h3>
+                    <p><a href="tel:081368313871">0813-6831-3871</a></p>
+                </div>
+                <div class="contact-card">
+                    <h3>GitHub</h3>
+                    <p><a href="https://github.com/Zuli2003" target="_blank">Zuli2003</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div id="login" class="page-content">
+            <div class="card card-login">
+                <h2 class="section-title text-center">Secure Access</h2>
+                <form>
+                    <div class="form-group">
+                        <label>Email Perusahaan</label>
+                        <input type="email" placeholder="admin@zuliianzshop.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" placeholder="••••••••">
+                    </div>
+                    <button type="button" class="btn-action">Masuk Ke Sistem</button>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 ZuliianzShop Enterprise. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
